@@ -1,6 +1,15 @@
+
+-- For ease of use: git add graph.c graph.h notes.txt testapp.c
+
 -- A graph is a collection of nodes
 
 -- An interface has a:
 	- Name
 	- Owning node
 	- A wire (or link)
+
+-- A link is a pair of interfaces
+
+-- A node has a:
+	- Name
+	- Set of empty interface slots
