@@ -1,0 +1,6 @@
+-- A graph is a collection of nodes
+
+-- An interface has a:
+	- Name
+	- Owning node
+	- A wire (or link)
