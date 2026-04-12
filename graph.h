@@ -36,3 +36,11 @@ static inline node_t* getNBRNode(interface_t* interface) {
 	return interface->attachedNode;
 }
 
+static inline int getAvailableInterfaceNode(node_t* node) {
+	for (int i = 0; i < MAX_INTERFACE_PER_NODE; i++) {
+		if (node->interface[i] == NULL) {
+			return i;
+		}
+	}
+	return -1;
+}
