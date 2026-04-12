@@ -1,5 +1,7 @@
 // Header file for graph
 
+// #include "linkedlist.h" (for linkedlist file when we make that)
+
 #define INTERFACE_NAME_SIZE 16
 #define NODE_NAME_SIZE 16
 #define MAX_INTERFACE_PER_NODE 10
