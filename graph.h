@@ -11,7 +11,7 @@ typedef struct link link_t;
 
 typedef struct interface {
 	char interfaceName[INTERFACE_NAME_SIZE];
-	struct node *attrNode;
+	struct node *attachedNode;
 	struct link *link;
 } interface_t;
 
@@ -31,3 +31,8 @@ typedef struct graph {
 	char topologyName[32];
 	linkedlist_t nodeList; // implement this as glued linked list in separate files
 };
+
+static inline node_t* getNBRNode(interface_t* interface) {
+	return interface->attachedNode;
+}
+
