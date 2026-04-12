@@ -13,6 +13,11 @@ struct link {
 	unsigned int cost;
 };
 
+struct node {
+	char nodeName[NODE_NAME_SIZE];
+	interface_t* interface[MAX_INTERFACE_PER_NODE];
+};
+
 typedef struct graph {
 	char topologyName[32];
 	linkedlist_t nodeList; // implement this as glued linked list in separate files
