@@ -1,11 +1,11 @@
-LIBNAME=libglthread.a
+LIBNAME=liblinkedlist.a
 TARGET:${LIBNAME} exe
-${LIBNAME}:glthread.o
-	ar rs ${LIBNAME} glthread.o
+${LIBNAME}:linkedlist.o
+	ar rs ${LIBNAME} linkedlist.o
 exe:main.o ${LIBNAME}
-	gcc -g main.o -o exe -L . -lglthread
-glthread.o:glthread.c
-	gcc -g -c -I . glthread.c -o glthread.o
+	gcc -g main.o -o exe -L . -llinkedlist
+linkedlist.o:linkedlist.c
+	gcc -g -c -I . linkedlist.c -o linkedlist.o
 main.o:main.c
 	gcc -g -c -I . main.c -o main.o
 clean:
