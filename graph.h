@@ -1,5 +1,7 @@
 // Header file for graph
 
+// INSTALL GCC AND MAKE OR UNIX TO RUN PROGRAMS
+
 // #include "linkedlist.h" (for linkedlist file when we make that)
 
 #define INTERFACE_NAME_SIZE 16
