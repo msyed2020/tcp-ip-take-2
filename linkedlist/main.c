@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <memory.h>
 
+// ll is verbal output that this works
+
 typedef struct emp_ {
 
     char name[30];
