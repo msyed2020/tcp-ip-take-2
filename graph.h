@@ -58,13 +58,18 @@ static inline interface_t* getNodeInterfaceByName(node_t* node, char* interfaceN
 }
 
 static inline node_t* getNodeByNodeName(graph_t* topo, char* nodeName) {
+	if (!topo || !nodeName) {
+		return NULL; 
+	}
 
-	linkedlist_node_t* linkedlistNode;
-	linkedlist_t* nodeList = &topo->nodeList;
-	ITERATE_LINKEDLIST_BEGIN(nodeList, linkedlist_node_t, linkedlistNode) {
-		node_t* node = get_node_from_linkedlist(linkedlistNode); // look into making this func
-		if (node && memcmp(node->nodeName, nodeName, NODE_NAME_SIZE) == 0)
-			return node;
-	} ITERATE_LINKEDLIST_ENDS;
-	return NULL;
+	node_t* currentNode = NULL;
+
+	// Iterate through the nodes in the graph
+	ITERATE_GRAPH_NODES_BEGIN(topo, currentNode) {
+		if (strcmp(currentNode->nodeName, nodeName) == 0) {
+			return currentNode; 
+		}
+	} ITERATE_GRAPH_NODES_END;
+
+	return NULL; 
 }
