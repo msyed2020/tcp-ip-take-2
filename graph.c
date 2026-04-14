@@ -4,6 +4,21 @@
 
 #include "graph.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "linkedlist/linkedlist.h"
+
+graph_t* createNewGraph(char *topologyName) {
+	graph_t* graph = calloc(1, sizeof(graph_t));
+	strncpy(graph->topologyName, topologyName, 32);
+	graph->topologyName[32] = '\0';
+
+	init_linkedlist(&graph->nodeList, NULL);
+	return graph;
+}
+
 graph_t* buildFirstTopo() {
 	graph_t *topo = createNewGraph("Generic Graph");
 
@@ -21,3 +36,4 @@ graph_t* buildFirstTopo() {
 
 	return topo;
 }
+
