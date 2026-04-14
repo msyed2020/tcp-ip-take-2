@@ -46,3 +46,25 @@ static inline int getAvailableInterfaceNode(node_t* node) {
 	}
 	return -1;
 }
+
+static inline interface_t* getNodeInterfaceByName(node_t* node, char* interfaceName) {
+	for (int i = 0;i < MAX_INTERFACE_PER_NODE;i++) {
+		if (node->interface[i] == NULL)
+			continue;
+		if (memcmp(node->interface[i]->interfaceName, interfaceName, INTERFACE_NAME_SIZE) == 0)
+			return node->interface[i];
+	}
+	return NULL;
+}
+
+static inline node_t* getNodeByNodeName(graph_t* topo, char* nodeName) {
+
+	linkedlist_node_t* linkedlistNode;
+	linkedlist_t* nodeList = &topo->nodeList;
+	ITERATE_LINKEDLIST_BEGIN(nodeList, linkedlist_node_t, linkedlistNode) {
+		node_t* node = get_node_from_linkedlist(linkedlistNode); // look into making this func
+		if (node && memcmp(node->nodeName, nodeName, NODE_NAME_SIZE) == 0)
+			return node;
+	} ITERATE_LINKEDLIST_ENDS;
+	return NULL;
+}
