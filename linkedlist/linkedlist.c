@@ -29,12 +29,12 @@ linkedlist_add(linkedlist_t* lst, linkedlist_node_t* llnode) {
     llnode->left = NULL;
     llnode->right = NULL;
     if (!lst->head) {
-        lst->head = glnode;
+        lst->head = llnode;
         return;
     }
     linkedlist_node_t* head = lst->head;
-    _linkedlist_add_next(glnode, head);
-    lst->head = glnode;
+    _linkedlist_add_next(llnode, head);
+    lst->head = llnode;
 }
 
 static void
