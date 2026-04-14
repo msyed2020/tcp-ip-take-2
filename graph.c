@@ -16,4 +16,6 @@ graph_t* buildFirstTopo() {
 	insertLinkBetweenTwoNodes(R1_re, R2_re, "eth0/2", "eth0/3", 1);
 
 	insertLinkBetweenTwoNodes(R0_re, R2_re, "eth0/4", "eth0/5", 1);
+
+	return topo;
 }
