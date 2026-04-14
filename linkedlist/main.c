@@ -30,21 +30,21 @@ main(int argc, char** argv) {
     emp1->salary = 50000;
     strncpy(emp1->designation, "HR", strlen("HR"));
     emp1->emp_id = 21;
-    linkedlist_node_init((&emp1->glnode));
+    linkedlist_node_init((&emp1->llnode));
 
     emp_t* emp2 = calloc(1, sizeof(emp_t));
     strncpy(emp2->name, "Abhishek", strlen("Abhishek"));
     emp1->salary = 150000;
     strncpy(emp2->designation, "SE3", strlen("SE3"));
     emp2->emp_id = 32;
-    linkedlist_node_init((&emp2->glnode));
+    linkedlist_node_init((&emp2->llnode));
 
     emp_t* emp3 = calloc(1, sizeof(emp_t));
     strncpy(emp3->name, "Arun", strlen("Arun"));
     emp3->salary = 60000;
     strncpy(emp3->designation, "SE4", strlen("SE4"));
     emp3->emp_id = 27;
-    linkedlist_node_init((&emp3->glnode));
+    linkedlist_node_init((&emp3->llnode));
 
 
     /*Now Create a linkedlist*/
