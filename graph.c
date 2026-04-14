@@ -1,5 +1,7 @@
 // graph.c
 
+// run proj in VS but use VSCode to compile and run
+
 #include "graph.h"
 
 graph_t* buildFirstTopo() {
