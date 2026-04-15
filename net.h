@@ -29,3 +29,11 @@ typedef struct intfNetworkProperties {
 	char mask;
 	
 } intfNetworkProperties_t;
+
+static inline void initIntfNetworkProperties(intfNetworkProperties_t* properties) {
+	memset(properties->macAddress.macAddr, 0, 48);
+	properties->isIPAddressConfigured = false;
+	memset(properties->ipAddress.ipAddr, 0, 16);
+	properties->mask = 0;
+}
+
