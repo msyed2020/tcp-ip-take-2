@@ -18,4 +18,5 @@ static inline void initNodeNetworkProperties(nodeNetworkProperties_t* properties
 
 	properties->isAddressLoopback = false;
 	memset(properties->loopbackAddress.ipAddr, 0, 16);
+
 }
