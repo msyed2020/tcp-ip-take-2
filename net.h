@@ -9,3 +9,8 @@ typedef struct macAddress {
 	char macAddr[8];
 } macAddress_t;
 
+typedef struct nodeNetworkProperties {
+	bool_t isAddressLoopback;
+	ipAddress_t loopbackAddress;
+} nodeNetworkProperties_t;
+
