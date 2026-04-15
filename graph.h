@@ -30,6 +30,9 @@ struct node {
 	char nodeName[NODE_NAME_SIZE];
 	interface_t* interface[MAX_INTERFACE_PER_NODE];
 	linkedlist_t graphGlue;
+
+	nodeNetworkProperties_t nodeNetworkProperties;
+
 };
 
 typedef struct graph {
