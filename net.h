@@ -20,3 +20,12 @@ static inline void initNodeNetworkProperties(nodeNetworkProperties_t* properties
 	memset(properties->loopbackAddress.ipAddr, 0, 16);
 
 }
+
+typedef struct intfNetworkProperties {
+	macAddress_t macAddress;
+
+	bool_t isIPAddressConfigured;
+	ipAddress_t ipAddress;
+	char mask;
+	
+} intfNetworkProperties_t;
