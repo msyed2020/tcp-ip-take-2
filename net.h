@@ -26,12 +26,16 @@ typedef struct nodeNetworkProperties {
 	ipAddress_t loopbackAddress;
 } nodeNetworkProperties_t;
 
+// initializing network properties within a node
+
 static inline void initNodeNetworkProperties(nodeNetworkProperties_t* properties) {
 
 	properties->isAddressLoopback = false;
 	memset(properties->loopbackAddress.ipAddr, 0, 16);
 
 }
+
+// struct to define network properties of an interface, such as MAC address, IP address and subnet mask
 
 typedef struct intfNetworkProperties {
 	macAddress_t macAddress;
@@ -41,6 +45,8 @@ typedef struct intfNetworkProperties {
 	char mask;
 	
 } intfNetworkProperties_t;
+
+// initializing network properties within an interface
 
 static inline void initIntfNetworkProperties(intfNetworkProperties_t* properties) {
 	memset(properties->macAddress.macAddr, 0, 48);
