@@ -41,3 +41,5 @@ static inline void initIntfNetworkProperties(intfNetworkProperties_t* properties
 #define IF_IP(intf_ptr) ((intf_ptr)->networkProperties.ipAddress.ipAddr)
 #define NODE_LO_ADDR(node_ptr) (node_ptr->->nodeNetworkProperties.loopbackAddress.ipAddr)
 
+bool_t nodeSetLoopbackAddress(node_t* node, char* ipAddr);
+bool_t nodeSetInterfaceIPAddress(node_t* node, char* localInterface, char* ipAddr, char mask);
