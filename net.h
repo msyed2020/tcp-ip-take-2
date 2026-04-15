@@ -37,9 +37,13 @@ static inline void initIntfNetworkProperties(intfNetworkProperties_t* properties
 	properties->mask = 0;
 }
 
+// macros to access networking properties of nodes and interfaces
+
 #define IF_MAC(intf_ptr) ((intf_ptr)->networkProperties.macAddress.macAddr)
 #define IF_IP(intf_ptr) ((intf_ptr)->networkProperties.ipAddress.ipAddr)
 #define NODE_LO_ADDR(node_ptr) (node_ptr->->nodeNetworkProperties.loopbackAddress.ipAddr)
+
+// functions to set network node properties
 
 bool_t nodeSetLoopbackAddress(node_t* node, char* ipAddr);
 bool_t nodeSetInterfaceIPAddress(node_t* node, char* localInterface, char* ipAddr, char mask);
