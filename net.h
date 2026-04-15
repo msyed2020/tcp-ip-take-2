@@ -48,4 +48,4 @@ static inline void initIntfNetworkProperties(intfNetworkProperties_t* properties
 bool_t nodeSetLoopbackAddress(node_t* node, char* ipAddr);
 bool_t nodeSetInterfaceIPAddress(node_t* node, char* localInterface, char* ipAddr, char mask);
 
-#endif
+#endif /* __NET__ */
