@@ -15,6 +15,9 @@ typedef struct interface {
 	char interfaceName[INTERFACE_NAME_SIZE];
 	struct node *attachedNode;
 	struct link *link;
+
+	intfNetworkProperties_t networkProperties;
+
 } interface_t;
 
 struct link {
