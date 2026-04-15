@@ -1,13 +1,25 @@
 #ifndef __NET__
 #define __NET__
 
+// IP Address struct
 typedef struct ipAddress {
 	char ipAddr[16];
 } ipAddress_t;
 
+// MAC Address struct
 typedef struct macAddress {
 	char macAddr[8];
 } macAddress_t;
+
+// struct to define network properties of a graph node, such as loopback address
+
+// A loopback address is a distinct reserved IP address range that starts from 127.0.0.0 and ends at 127.255.255.255
+
+// The loopback addresses are built into the IP domain system, enabling devices to transmit and receive data packets
+
+// The loopback address 127.0.0.1 is generally known as localhost
+
+// TCP/IP protocol manages all the loopback addresses in the operating system
 
 typedef struct nodeNetworkProperties {
 	bool_t isAddressLoopback;
