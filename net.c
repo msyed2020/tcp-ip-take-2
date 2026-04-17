@@ -18,7 +18,19 @@ bool_t nodeSetLoopbackAddress(node_t* node, char* ipAddr) {
 
 	node->nodeNetworkProperties.isAddressLoopback = true;
 	strncpy(NODE_LO_ADDR(node), ipAddr, 16);
+	NODE_LO_ADDR(node)[15] = '\0'; // Ensure there is null termination
 
+	return true;
+}
 
+bool_t nodeSetInterfaceIPAddress(node_t* node, char* localInterface, char* ipAddr, char mask) {
+	interface_t* interface = getNodeInterfaceByName(node, localInterface);
+	if (!interface)
+		assert(0); // Interface not found
+	strncpy(IF_IP(interface), ipAddr, 16);
+	IF_IP(interface)[15] = '\0'; // Ensure there is null termination
+
+	interface->networkProperties.mask = mask;
+	interface->networkProperties.isIPAddressConfigured = true;
 	return true;
 }

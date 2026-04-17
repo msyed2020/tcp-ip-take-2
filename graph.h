@@ -7,6 +7,8 @@
 #define INTERFACE_NAME_SIZE 16
 #define NODE_NAME_SIZE 16
 #define MAX_INTERFACE_PER_NODE 10
+
+#include "net.h"
  
 typedef struct node node_t;
 typedef struct link link_t;
