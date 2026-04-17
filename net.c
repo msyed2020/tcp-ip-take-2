@@ -3,6 +3,11 @@
 #include "utils.h"
 #include <stdio.h>
 
+// as soon as you add a link to the topology/graph and connect
+// two nodes, the interfaces must be assigned a unique MAC address. 
+// This is because the MAC address is used to identify the interface on the network,
+// and ensure that data packets are correctly routed to their destination
+
 // assigning unique MAC address to an interface in the graph
 
 void interfaceAssignMACAddress(interface_t* interface) {
