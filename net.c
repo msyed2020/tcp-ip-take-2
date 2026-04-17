@@ -34,3 +34,7 @@ bool_t nodeSetInterfaceIPAddress(node_t* node, char* localInterface, char* ipAdd
 	interface->networkProperties.isIPAddressConfigured = true;
 	return true;
 }
+
+bool_t nodeUnsetInterfaceIPAddress(node_t* node, char* localInterface) {
+	return true;
+}
