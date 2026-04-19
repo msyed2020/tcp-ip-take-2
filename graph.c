@@ -68,6 +68,9 @@ graph_t* buildFirstTopo() {
 
 	insertLinkBetweenTwoNodes(R0_re, R2_re, "eth0/4", "eth0/5", 1);
 
+	nodeSetLoopbackAddress(R0_re, "122.1.1.0");
+	nodeSetInterfaceIPAddress(R0_re, "eth0/4", "40.1.1.1", 24);
+
 	return topo;
 }
 
