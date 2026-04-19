@@ -3,6 +3,8 @@
 
 #define INTERFACE_IP(interface_ptr) interface_ptr->networkProperties.nodeNetworkProperties.ipAddress
 #define INTERFACE_MAC(interface_ptr) interface_ptr->networkProperties.macAddress
+#define NODE_LOOPBACK_ADDR(node_ptr) node_ptr->nodeNetworkProperties->ipAddress
+#define IS_INTF_L3_MODE(interface_ptr) interface_ptr->networkProperties.nodeNetworkProperties.ipAddress != NULL
 
 // IP Address struct
 typedef struct ipAddress {
