@@ -1,6 +1,9 @@
 #ifndef __NET__
 #define __NET__
 
+#define INTERFACE_IP(interface_ptr) interface_ptr->networkProperties.nodeNetworkProperties.ipAddress
+#define INTERFACE_MAC(interface_ptr) interface_ptr->networkProperties.macAddress
+
 // IP Address struct
 typedef struct ipAddress {
 	char ipAddr[16];
