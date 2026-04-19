@@ -70,7 +70,16 @@ graph_t* buildFirstTopo() {
 
 	nodeSetLoopbackAddress(R0_re, "122.1.1.0");
 	nodeSetInterfaceIPAddress(R0_re, "eth0/4", "40.1.1.1", 24);
+	nodeSetInterfaceIPAddress(R0_re, "eth0/0", "20.1.1.1", 24);
 
+	nodeSetLoopbackAddress(R1_re, "122.1.1.1");
+	nodeSetInterfaceIPAddress(R1_re, "eth0/1", "20.1.1.2", 24);
+	nodeSetInterfaceIPAddress(R1_re, "eth0/2", "30.1.1.1", 24);
+
+	nodeSetLoopbackAddress(R2_re, "122.1.1.2");
+	nodeSetInterfaceIPAddress(R2_re, "eth0/3", "30.1.1.2", 24);
+	nodeSetInterfaceIPAddress(R2_re, "eth0/5", "40.1.1.2", 24);
+	
 	return topo;
 }
 
