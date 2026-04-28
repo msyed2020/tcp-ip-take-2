@@ -13,3 +13,5 @@
 -- A node has a:
 	- Name
 	- Set of empty interface slots
+
+-- feel safe n warm
